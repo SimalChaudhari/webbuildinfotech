@@ -1,0 +1,94 @@
+/* CSS for Animation */
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdown {
+  animation: dropdown 0.3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.animate-slide-in {
+  opacity: 1;
+  animation: slide-in 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hover\:scale-110:hover {
+  transform: scale(1.10);
+}
+
+.transition-transform {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Header.module.css */
+.animate-slide-in {
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-dropdown {
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  animation: dropdownExpand 0.3s ease forwards;
+}
+
+@keyframes dropdownExpand {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.hide-dropdown {
+  transform: scaleY(1);
+  transform-origin: top;
+  opacity: 1;
+  animation: dropdownCollapse 0.3s ease forwards;
+}
+
+@keyframes dropdownCollapse {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}

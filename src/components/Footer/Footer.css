@@ -1,0 +1,17 @@
+.footer-container {
+    background-color: #d4e8f9; /* Dark blue background */
+    color: #000; /* White text */
+    text-align: center; /* Center-align the content */
+    padding: 20px 0; /* Add vertical spacing */
+    font-size: 1rem; /* Adjust the font size */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-text {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.9; /* Slight transparency for the text */
+  }
+  
