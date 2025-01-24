@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaCogs, FaIndustry, FaLaptopCode, FaBriefcase, FaBuilding, FaEnvelope, FaChevronDown } from 'react-icons/fa';
+import { FaCogs, FaIndustry, FaLaptopCode, FaBriefcase,FaHome, FaBuilding, FaEnvelope, FaChevronDown } from 'react-icons/fa';
 import styles from './Header.module.css';
+import LogoHeader from '../LogoHeader/LogoHeader';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +11,7 @@ const Header = () => {
   const location = useLocation();
 
   const menuItems = [
+    { name: 'Home', path: '/', icon: <FaHome />, subMenu: [] },
     {
       name: 'Services',
       path: '/services',
@@ -59,10 +61,7 @@ const Header = () => {
     <header className="bg-[#d4e8f9] shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
-        <div className="header-title font-serif font-bold text-blue-600">
-          <Link to="/">WebBuildInfoTech</Link>
-        </div>
-
+         <LogoHeader/>
         {/* Desktop Menu */}
         <nav className="hidden lg:flex items-center space-x-6 relative">
           {menuItems.map((item, index) => (
