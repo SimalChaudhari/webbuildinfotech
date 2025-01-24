@@ -7,7 +7,7 @@ import Company from './pages/company/Company';
 import Contact from './pages/contact/Contact';
 import Technology from './pages/technologies/Technology';
 import Layout from './components/Layout';
-import Home from './pages/Home/Home';
+import HomeLayout from './pages/Home/HomeLayout';
 
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
     <Router>
       <Routes>
       <Route path="/" element={<Layout/>}>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<HomeLayout/>}/>
         <Route path="/services" element={<Services/>} />
         <Route path="/industries" element={<Industries/>} />
         <Route path="/technologies" element={<Technology/>} />
